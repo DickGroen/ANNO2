@@ -1,29 +1,42 @@
-# ANNO — GitHub Pages website
+[README.md](https://github.com/user-attachments/files/34805731/README.md)
+# ANNO website refinement
 
-A responsive static website built with plain HTML, CSS and JavaScript. No framework, build step, server or paid subscription is required.
+This package contains the refined website source files:
 
-## Preview
-Open `index.html` in your browser.
+- `index.html`
+- `style.css`
+- `script.js`
 
-## Publish on GitHub Pages
-1. Create a GitHub repository, for example `anno-website`.
-2. Upload the contents of this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-5. GitHub will show the published URL when deployment is ready.
+## Keep your image folder
 
-## Before publishing
-- Replace `hello@anno.example` in `index.html` with ANNO's real contact email.
-- Confirm the planned €169 bottle price and €10 Discovery sample terms.
-- The bottle is an illustrative concept, not an approved product photograph. Replace it after the physical prototype is final.
-- The material visuals are CSS artwork, not photographs of actual materials. Replace them with original, rights-cleared ANNO photography when ready.
-- Add legally required product information before offering the perfume for sale.
-- Review the EN/NL/ES translations before launch.
+Do not delete or rename the existing `images` folder. The website expects these exact paths:
 
-## Files
-- `index.html` — content and page structure
-- `style.css` — visual design and responsive layout
-- `script.js` — language selector and mobile navigation
+- `images/anno-homepage.png`
+- `images/anno-product-story.png`
 
-## Campaign images
-The two supplied ANNO campaign visuals are used on the homepage and product story: `images/anno-homepage.png` and `images/anno-product-story.png`.
+Your GitHub repository should therefore contain:
+
+```text
+ANNO2/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── images/
+    ├── anno-homepage.png
+    └── anno-product-story.png
+```
+
+## Publish the update
+
+1. Make a backup of your current three source files.
+2. Replace `index.html`, `style.css` and `script.js` in the GitHub repository with the files in this package.
+3. Leave the existing image files in `images` untouched.
+4. Commit the changes.
+5. Open the website and refresh with `Ctrl + F5`.
+
+## Important before launch
+
+The contact links still use the placeholder address `hello@anno.example`. Replace it in `index.html` with the real ANNO contact email before publishing the live site.
+
+The price shown for ANNO No. 01 is €169 for 50 ml Eau de Parfum. The Discovery sample is €10 for 2 ml, with standard shipping included and the sample price credited towards the first 50 ml bottle purchase.
