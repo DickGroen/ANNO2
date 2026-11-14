@@ -11,3 +11,109 @@
 @media(max-width:700px){html{scroll-padding-top:70px}.site-header{height:70px;padding:0 6vw}.logo{font-size:27px}.menu-toggle{display:flex;width:34px;height:34px;margin-left:auto;padding:8px 5px;flex-direction:column;justify-content:center;gap:6px;border:0;background:transparent;cursor:pointer}.menu-toggle span{display:block;width:23px;height:1px;background:var(--ink)}nav{display:none;position:absolute;top:69px;left:0;right:0;padding:20px 7vw 25px;flex-direction:column;align-items:flex-start;gap:13px;background:var(--paper)}nav.open{display:flex}.language-label{margin-left:4px}select{font-size:11px}.hero{min-height:0}.hero-image{height:76vw;min-height:300px;max-height:470px;object-fit:cover;object-position:52% center}.hero:after{background:linear-gradient(0deg,rgba(40,31,22,.26),transparent 65%)}.hero-panel{position:absolute;left:7vw;right:7vw;bottom:11%;width:auto;padding:0;color:#fff8ed}.hero-panel h1{font-size:clamp(39px,10vw,57px)}.hero-panel .eyebrow{font-size:10px}.hero-panel p{font-size:17px;max-width:350px}.hero-caption{position:static;padding:13px 7vw;background:#bda27d;color:#fff8ed;text-shadow:none;font-size:9px}.hero-caption span:nth-child(2){display:none}.section-pad{padding:78px 7vw}.intro-content,.material-grid,.product,.ultramarine,.discovery{grid-template-columns:1fr}.intro-content{gap:22px;margin-top:29px}.intro h2{font-size:clamp(42px,11vw,58px)}.materials>h2{margin:27px 0 35px;font-size:clamp(39px,10vw,54px)}.material-grid{gap:42px}.material-card:nth-child(2),.material-card:nth-child(3){padding-top:0}.material-visual,.material-card:nth-child(2) .material-visual,.material-card:nth-child(3) .material-visual{height:83vw;max-height:390px}.material-card h3{font-size:36px}.material-card p{font-size:15px}.material-detail-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px;margin-top:45px}.material-detail-gallery figure:nth-child(even){padding-top:27px}.material-detail-gallery img{aspect-ratio:5/4}.manifesto{padding:74px 8vw;font-size:clamp(27px,7vw,36px)}.product{gap:36px}.product-visual{margin-left:0}.product-visual img{aspect-ratio:4/5;max-height:none}.product-copy h2{font-size:clamp(62px,16vw,80px)}.ultramarine{gap:27px}.pigment-visual,.pigment-visual img{min-height:0;aspect-ratio:4/3;margin-left:0}.pigment-study{grid-template-columns:1fr;gap:0;margin-top:0}.pigment-study img{height:auto;aspect-ratio:4/3}.ultramarine h2{font-size:52px}.discovery{gap:27px}.discovery-visual{transform:none}.discovery-visual img{aspect-ratio:4/3}.discovery h2,.retail h2{font-size:clamp(42px,11vw,55px)}.retail{padding:78px 8vw}.site-footer{padding:37px 7vw 25px;grid-template-columns:1fr;gap:12px}.site-footer p{justify-self:start}}
 @media(prefers-reduced-motion:no-preference){.hero-panel{animation:soft-arrive 1.6s ease both}.material-visual img,.material-detail-gallery img,.text-link,.button{transition-duration:1s}@keyframes soft-arrive{from{opacity:.86;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* ANNO — organic editorial image shapes: tactile, varied, never ornamental for its own sake */
+.material-visual{overflow:visible;background:transparent}
+.material-visual img{overflow:hidden;will-change:transform;box-shadow:0 16px 38px rgba(75,55,35,.075)}
+/* Paper: soft, cloud-like silhouette */
+.material-card:nth-child(1) .material-visual{width:94%;margin-left:2%}
+.material-card:nth-child(1) .material-visual img{border-radius:48% 52% 43% 57% / 39% 44% 56% 61%;}
+/* Ink: a quiet hexagonal crop, like a cut piece of a printmaker's block */
+.material-card:nth-child(2) .material-visual{width:94%;margin-left:3%}
+.material-card:nth-child(2) .material-visual img{clip-path:polygon(24% 3%,76% 0,100% 50%,76% 97%,24% 100%,0 50%);}
+/* Ultramarine: restrained, faceted silhouette — the pigment remains the detail */
+.material-card:nth-child(3) .material-visual{width:94%;margin-left:3%}
+.material-card:nth-child(3) .material-visual img{clip-path:polygon(50% 0,96% 23%,88% 78%,50% 100%,8% 77%,2% 25%);}
+.material-visual span{left:18px;bottom:17px}
+.material-card:nth-child(2) .material-visual span{left:17%;bottom:15%}
+.material-card:nth-child(3) .material-visual span{left:16%;bottom:16%}
+
+/* A playful editorial rhythm in the detail sequence: cloud, arch, cut corner, circle, angled print, soft oval */
+.material-detail-gallery figure:nth-child(1) img{border-radius:53% 47% 45% 55% / 43% 40% 60% 57%;}
+.material-detail-gallery figure:nth-child(2) img{border-radius:48% 48% 4% 4% / 36% 36% 4% 4%;}
+.material-detail-gallery figure:nth-child(3) img{clip-path:polygon(50% 0,100% 100%,0 100%);}
+.material-detail-gallery figure:nth-child(4) img{clip-path:polygon(18% 0,82% 0,100% 50%,82% 100%,18% 100%,0 50%);}
+.material-detail-gallery figure:nth-child(5) img{border-radius:8% 48% 8% 48% / 8% 40% 8% 40%;}
+.material-detail-gallery figure:nth-child(6) img{border-radius:50% 50% 46% 54% / 42% 42% 58% 58%;}
+.material-detail-gallery figure:nth-child(3){padding-top:23px}
+.material-detail-gallery figure:nth-child(5){padding-top:12px}
+
+/* Hero stays broad and legible; product photography stays recognisable and conversion-led. */
+.hero-image{object-position:center 48%}
+.product-visual img{border-radius:38% 38% 3% 3% / 24% 24% 3% 3%;}
+.pigment-visual img{border-radius:46% 8% 44% 8% / 12% 42% 12% 42%;}
+.pigment-study img{border-radius:3% 36% 3% 36% / 3% 28% 3% 28%;}
+.discovery-visual img{border-radius:42% 42% 4% 4% / 24% 24% 4% 4%;}
+
+@media(max-width:700px){
+  .material-card:nth-child(1) .material-visual,.material-card:nth-child(2) .material-visual,.material-card:nth-child(3) .material-visual{width:91%;margin-left:auto;margin-right:auto}
+  .material-detail-gallery figure:nth-child(3){padding-top:12px}
+  .material-detail-gallery figure:nth-child(5){padding-top:18px}
+  .product-visual img{border-radius:34% 34% 2% 2% / 17% 17% 2% 2%;}
+  .discovery-visual{width:88%;margin-inline:auto}
+}
+
+/* ANNO — the photograph itself defines the silhouette (not a frame around it). */
+/* Keep the hero wide for immediate brand recognition, but soften its actual image edge. */
+.hero-image{
+  clip-path: polygon(0 0,100% 0,100% 88%,96% 91%,92% 94%,86% 96%,78% 97%,68% 96%,58% 98%,48% 96%,38% 98%,28% 96%,18% 97%,9% 94%,0 90%);
+}
+/* Distinct, deliberately varied photo contours across the editorial story. */
+.material-card:nth-child(1) .material-visual img{
+  clip-path: polygon(12% 2%,30% 0,43% 5%,58% 1%,75% 5%,91% 1%,100% 18%,96% 38%,100% 55%,94% 73%,98% 91%,79% 98%,61% 94%,44% 100%,26% 95%,7% 99%,0 79%,5% 59%,0 39%,6% 19%);
+  border-radius:0;
+}
+.material-card:nth-child(2) .material-visual img{
+  clip-path: polygon(24% 0,76% 0,100% 50%,76% 100%,24% 100%,0 50%);
+  border-radius:0;
+}
+.material-card:nth-child(3) .material-visual img{
+  clip-path: polygon(50% 0,96% 24%,88% 78%,50% 100%,12% 78%,4% 24%);
+  border-radius:0;
+}
+.material-detail-gallery figure:nth-child(1) img{
+  clip-path: polygon(15% 2%,36% 0,52% 5%,70% 0,91% 7%,100% 27%,95% 47%,100% 67%,87% 92%,65% 100%,44% 94%,23% 100%,4% 83%,0 61%,6% 40%,0 20%);
+  border-radius:0;
+}
+.material-detail-gallery figure:nth-child(2) img{
+  clip-path: polygon(0 0,100% 0,100% 73%,88% 87%,70% 94%,50% 100%,30% 94%,12% 87%,0 73%);
+  border-radius:0;
+}
+.material-detail-gallery figure:nth-child(3) img{
+  clip-path: polygon(50% 0,100% 100%,0 100%);
+  border-radius:0;
+}
+.material-detail-gallery figure:nth-child(4) img{
+  clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);
+  border-radius:0;
+}
+.material-detail-gallery figure:nth-child(5) img{
+  clip-path: polygon(0 0,83% 0,100% 18%,100% 100%,17% 100%,0 82%);
+  border-radius:0;
+}
+.material-detail-gallery figure:nth-child(6) img{
+  clip-path: polygon(50% 0,87% 13%,100% 50%,87% 87%,50% 100%,13% 87%,0 50%,13% 13%);
+  border-radius:0;
+}
+/* Product and sample photos use softer, more restrained sculptural contours for conversion clarity. */
+.product-visual img{
+  clip-path: polygon(16% 0,84% 0,96% 10%,100% 28%,96% 78%,87% 94%,70% 100%,25% 98%,8% 88%,0 67%,3% 24%);
+  border-radius:0;
+}
+.pigment-visual img{
+  clip-path: polygon(12% 0,87% 4%,100% 21%,96% 77%,81% 100%,16% 96%,0 78%,4% 20%);
+  border-radius:0;
+}
+.pigment-study img{
+  clip-path: polygon(0 0,88% 0,100% 15%,100% 100%,12% 100%,0 84%);
+  border-radius:0;
+}
+.discovery-visual img{
+  clip-path: polygon(18% 0,82% 0,97% 12%,100% 33%,96% 83%,82% 100%,18% 100%,4% 84%,0 33%,3% 12%);
+  border-radius:0;
+}
+@media(max-width:700px){
+  .hero-image{clip-path:polygon(0 0,100% 0,100% 92%,90% 96%,75% 94%,60% 98%,42% 95%,25% 98%,10% 94%,0 90%)}
+  .product-visual img{clip-path:polygon(15% 0,85% 0,100% 14%,97% 83%,84% 100%,16% 100%,3% 83%,0 14%);border-radius:0}
+  .discovery-visual img{clip-path:polygon(14% 0,86% 0,100% 16%,96% 84%,84% 100%,16% 100%,4% 84%,0 16%);border-radius:0}
+}
