@@ -1,61 +1,46 @@
+(() => {
+  const language = document.getElementById('lang');
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('nav');
 
-const languageSelect = document.querySelector("#lang");
-
-function setLanguage(language) {
-  document.documentElement.lang = language;
-  document.querySelectorAll("[data-en]").forEach((element) => {
-    const translation = element.dataset[language];
-    if (translation) element.innerHTML = translation;
-  });
-  if (languageSelect) languageSelect.value = language;
-  try {
-    localStorage.setItem("anno-language", language);
-  } catch (error) {
-    // The site still works when browser storage is unavailable.
+  function setLanguage(value) {
+    document.documentElement.lang = value;
+    document.querySelectorAll('[data-' + value + ']').forEach((element) => {
+      element.innerHTML = element.getAttribute('data-' + value);
+    });
+    try { localStorage.setItem('anno-language', value); } catch (error) {}
   }
-}
 
-if (languageSelect) {
-  languageSelect.addEventListener("change", (event) => setLanguage(event.target.value));
-}
+  if (language) {
+    let saved = 'en';
+    try { saved = localStorage.getItem('anno-language') || 'en'; } catch (error) {}
+    language.value = saved;
+    setLanguage(saved);
+    language.addEventListener('change', () => setLanguage(language.value));
+  }
 
-let preferredLanguage = "en";
-try {
-  preferredLanguage = localStorage.getItem("anno-language") || "en";
-} catch (error) {
-  // Use English as the default when browser storage is unavailable.
-}
-setLanguage(preferredLanguage);
+  function closeMenu() {
+    if (!nav || !menu) return;
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-label', 'Open menu');
+  }
 
-const year = document.querySelector("#year");
-if (year) year.textContent = new Date().getFullYear();
+  if (menu && nav) {
+    menu.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) closeMenu();
+    });
+  }
 
-const menuButton = document.querySelector("#menu");
-const navigation = document.querySelector("#nav");
-
-function closeMenu() {
-  if (!menuButton || !navigation) return;
-  navigation.classList.remove("open");
-  menuButton.setAttribute("aria-expanded", "false");
-  menuButton.setAttribute("aria-label", "Open menu");
-}
-
-if (menuButton && navigation) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-  });
-
-  navigation.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMenu();
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 700) closeMenu();
-  });
-}
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+})();
