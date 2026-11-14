@@ -117,3 +117,130 @@
   .product-visual img{clip-path:polygon(15% 0,85% 0,100% 14%,97% 83%,84% 100%,16% 100%,3% 83%,0 14%);border-radius:0}
   .discovery-visual img{clip-path:polygon(14% 0,86% 0,100% 16%,96% 84%,84% 100%,16% 100%,4% 84%,0 16%);border-radius:0}
 }
+
+/* ANNO — warm, softer editorial refinement (CSS-only override) */
+:root{
+  --ivory:#f6efe4;
+  --parchment:#ece3d3;
+  --paper:#eadfcb;
+  --sand:#c9b69a;
+  --ochre:#b08a55;
+  --amber:#a8794b;
+  --clay:#b9855b;
+  --ink:#343b43;
+  --muted:#665f56;
+  --line:rgba(67,57,45,.08);
+  --blue:#385f8a;
+}
+body{background:var(--ivory);color:#343b43;font-size:16px;line-height:1.7}
+.announcement{background:#eadfcb;color:#51483d;font-size:11px;letter-spacing:.08em;text-transform:none}
+.site-header{background:rgba(246,239,228,.94);box-shadow:0 5px 24px rgba(76,59,39,.055);border:0}
+nav a,.language-label,select{font-size:12px;letter-spacing:.02em;text-transform:none;color:#514b43}
+nav a:hover,.text-link:hover{color:var(--clay)}
+.eyebrow,.section-index,.material-visual span,.material-meta,.notes span,.image-caption,.hero-caption,.material-detail-gallery figcaption,.pigment-study figcaption,.discovery-visual figcaption,.site-footer small{
+  font-size:11px;letter-spacing:.08em;text-transform:none;font-weight:500
+}
+.hero{background:var(--parchment);padding:0 2.2vw 2.2vw;overflow:hidden}
+.hero-image{height:clamp(500px,62vw,740px);border-radius:24px;clip-path:none;object-position:center 48%}
+.hero:after{inset:0 2.2vw 2.2vw;border-radius:24px;background:linear-gradient(90deg,rgba(45,35,25,.34),rgba(45,35,25,.04) 72%),linear-gradient(0deg,rgba(45,35,25,.19),transparent 40%)}
+.hero-panel{left:8%;bottom:16%;width:min(510px,48%);padding:28px 30px 26px;background:rgba(57,47,37,.24);border:1px solid rgba(255,248,236,.16);border-radius:26px;backdrop-filter:blur(5px);text-shadow:0 1px 10px rgba(35,28,21,.18)}
+.hero-panel .eyebrow{font-size:11px;letter-spacing:.08em}
+.hero-panel h1{letter-spacing:-.025em}
+.hero-panel .text-link{font-size:12px;letter-spacing:.08em;text-transform:none;border-bottom:0}
+.hero-caption{left:5%;right:5%;bottom:4.1%;font-size:11px;letter-spacing:.08em}
+.section-pad{padding-top:clamp(88px,9vw,132px);padding-bottom:clamp(88px,9vw,132px)}
+.intro{background:linear-gradient(180deg,#f6efe4 0%,#f2e9dc 100%)}
+.materials{background:#ece3d3;color:#263b50}
+.materials>h2,.materials .section-index,.material-card h3{color:#263b50}
+.material-card p{font-size:16px;line-height:1.7;color:#5d594f}
+.material-grid{align-items:start;gap:clamp(28px,4vw,62px)}
+.material-card:nth-child(2){padding-top:78px}
+.material-card:nth-child(3){padding-top:28px}
+.material-visual{overflow:visible;height:clamp(260px,29vw,390px)}
+.material-visual img,.material-detail-gallery img,.pigment-visual img,.pigment-study img,.product-visual img,.discovery-visual img{
+  clip-path:none;border-radius:22px;box-shadow:0 12px 30px rgba(67,51,34,.08)
+}
+.material-card:nth-child(1) .material-visual img{border-radius:48% 52% 44% 56% / 38% 43% 57% 62%}
+.material-card:nth-child(2) .material-visual img{border-radius:22px}
+.material-card:nth-child(3) .material-visual img{clip-path:polygon(50% 0,94% 24%,94% 76%,50% 100%,6% 76%,6% 24%);border-radius:0}
+.material-visual span{left:16px;bottom:16px;padding:7px 12px;background:rgba(57,47,37,.62);border-radius:999px;color:#fff8ed;text-shadow:none;font-size:11px;letter-spacing:.08em}
+.material-card:nth-child(2) .material-visual span,.material-card:nth-child(3) .material-visual span{left:16px;bottom:16px}
+.material-meta{margin-top:22px;font-size:11px}
+.material-card p,.intro-text,.product-copy>p,.ultramarine p,.discovery-content>p,.retail p{font-size:16px;line-height:1.7}
+.material-detail-gallery{gap:clamp(14px,2vw,27px);margin-top:78px}
+.material-detail-gallery figure:nth-child(even){padding-top:42px}
+.material-detail-gallery figure:nth-child(1) img{border-radius:48% 52% 44% 56% / 38% 43% 57% 62%}
+.material-detail-gallery figure:nth-child(2) img{border-radius:22px}
+.material-detail-gallery figure:nth-child(3) img{clip-path:polygon(50% 0,100% 100%,0 100%);border-radius:0}
+.material-detail-gallery figure:nth-child(4) img{border-radius:22px}
+.material-detail-gallery figure:nth-child(5) img{border-radius:22px}
+.material-detail-gallery figure:nth-child(6) img{border-radius:22px}
+.material-detail-gallery figcaption,.pigment-study figcaption,.discovery-visual figcaption{display:inline-block;margin-top:10px;padding:6px 11px;background:rgba(246,239,228,.92);border-radius:999px;color:#5d554b;font-size:11px;letter-spacing:.08em}
+.manifesto{background:#f0e6d7;color:#78644e}
+.product{background:#f6efe4}
+.product-visual{margin-left:-2vw}
+.product-visual img{border-radius:24px;clip-path:none;object-position:center;max-height:650px}
+.image-caption{display:inline-block;margin-top:10px;padding:6px 11px;background:#eadfcb;border-radius:999px;color:#5c5145;font-size:11px}
+.product-copy>p{color:#5f594f}
+.notes{border:0;padding:0;margin:30px 0 27px;gap:13px}
+.notes span{font-size:11px;letter-spacing:.08em;color:#716657}
+.notes p{font-size:17px;color:#3e4143}
+.price{color:#986f43}
+.text-link{color:#385f8a;border-bottom:0;font-size:12px;letter-spacing:.08em;text-transform:none}
+.ultramarine{background:linear-gradient(120deg,#f0e6d7,#f6efe4)}
+.pigment-visual img,.pigment-study img{border-radius:22px;clip-path:none}
+.discovery{background:#f4ecdf}
+.discovery-visual img{border-radius:48% 48% 22px 22px / 28% 28% 22px 22px;clip-path:none}
+.discovery-content>p{color:#625b52}
+.sample-price{color:#986f43}
+.button,.button-light{
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 23px;
+  border:1px solid rgba(130,100,66,.48);border-radius:999px;background:transparent;
+  color:#5f4b35;font-size:11px;letter-spacing:.08em;text-transform:none;
+  transition:transform .8s ease,box-shadow .8s ease,background-color .8s ease,color .8s ease,border-color .8s ease
+}
+.button:hover,.button-light:hover{transform:translateY(-2px);background:rgba(185,133,91,.12);color:#47392b;border-color:#b9855b;box-shadow:0 9px 22px rgba(92,66,42,.10)}
+.retail{background:#3b3027;color:#f6efe4}
+.retail .section-index,.retail h2{color:#f6efe4}
+.retail p{color:#e4d8c8}
+.retail .button-light{color:#f6efe4;border-color:rgba(246,239,228,.55)}
+.retail .button-light:hover{background:rgba(246,239,228,.12);color:#fff}
+.site-footer{background:#eadfcb;color:#403a33}
+.site-footer p{color:#665747}
+.site-footer small{border:0;padding-top:10px}
+/* Keep the repeated pigment photographs from appearing twice in the story. */
+.pigment-visual,.pigment-study{display:none}
+.ultramarine{display:block}
+.ultramarine-copy{max-width:720px;margin-inline:auto}
+/* The current file's so-called product photograph is actually a spoonful of ultramarine pigment, not the perfume bottle. Keep it restrained until a true bottle photograph is supplied. */
+.product-visual img{object-position:center 53%;aspect-ratio:1/1.05;max-height:590px;filter:saturate(.72) sepia(.12)}
+/* Ensure no uppercase transform survives from earlier rules. */
+.eyebrow,.section-index,.announcement,.material-meta,.material-visual span,.material-detail-gallery figcaption,.pigment-study figcaption,.discovery-visual figcaption,nav a,.button,.text-link,.notes span,.site-footer small{text-transform:none}
+@media(max-width:1000px){
+  .hero{padding:0 1.6vw 1.6vw}
+  .hero:after{inset:0 1.6vw 1.6vw}
+  .hero-panel{left:7%;width:min(500px,58%)}
+}
+@media(max-width:700px){
+  .hero{padding:0 3vw 3vw}
+  .hero-image{height:78vw;min-height:320px;max-height:500px;border-radius:20px;clip-path:none}
+  .hero:after{inset:0 3vw 3vw;border-radius:20px}
+  .hero-panel{left:6%;right:6%;bottom:13%;width:auto;padding:19px 20px 18px;border-radius:20px}
+  .hero-panel h1{font-size:clamp(38px,10vw,55px)}
+  .hero-caption{left:6%;right:6%;bottom:4%;font-size:10px}
+  .section-pad{padding:76px 7vw}
+  .material-grid{gap:38px}
+  .material-card:nth-child(2),.material-card:nth-child(3){padding-top:0}
+  .material-visual,.material-card:nth-child(2) .material-visual,.material-card:nth-child(3) .material-visual{height:78vw;max-height:390px;width:92%;margin-inline:auto}
+  .material-detail-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px;margin-top:48px}
+  .material-detail-gallery figure:nth-child(even){padding-top:24px}
+  .product{gap:30px}
+  .product-visual{margin-left:0}
+  .product-visual img{aspect-ratio:4/5;max-height:none;border-radius:22px;clip-path:none}
+  .discovery{gap:25px}
+  .discovery-visual{width:88%;margin-inline:auto}
+  .discovery-visual img{aspect-ratio:4/5;border-radius:46% 46% 20px 20px / 26% 26% 20px 20px}
+  .retail{padding:76px 8vw}
+  .site-footer small{padding-top:6px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
