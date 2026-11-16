@@ -244,16 +244,3 @@ nav a:hover,.text-link:hover{color:var(--clay)}
   .site-footer small{padding-top:6px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
-
-/* ANNO — final pass: one calm shape language, no hard blocks.
-   Earlier clip-path polygons kept winning on specificity; this ends that. */
-.hero-image,.material-card .material-visual img,.material-detail-gallery figure img,
-.product-visual img,.discovery-visual img{clip-path:none!important}
-.material-card .material-visual img,.material-detail-gallery figure img{border-radius:22px!important}
-/* Retail: warm sand instead of the dark block */
-.retail{background:#e4d5bf;color:#343b43}
-.retail .section-index,.retail h2{color:#343b43}
-.retail p{color:#5d5448}
-.retail .button-light{color:#5f4b35;border-color:rgba(95,75,53,.5)}
-.retail .button-light:hover{background:rgba(185,133,91,.14);color:#47392b;border-color:#b9855b}
-.ultramarine{background:#f0e6d7}
